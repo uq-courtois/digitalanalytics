@@ -1,3 +1,4 @@
+### DATA TYPES
 ### We distinguish between the following four types of variables
 
 x = 3 # Integer variable
