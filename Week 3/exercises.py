@@ -45,7 +45,7 @@ lyric = "Everybody rock your body Everybody rock your body right Backstreet's Ba
 
 ### EXERCISE 6a:
 
-# Print the first five unique urls that contain an .au domain form the list urls
+# Print the first five urls that contain an .au domain form the list urls
 
 urls = [
 "www.abc.net.au/",
