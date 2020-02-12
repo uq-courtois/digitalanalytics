@@ -81,6 +81,9 @@ listab = lista + listb
 print('a' in listab) # There's an 'a' in the combined list, so this will return a value 'True'
 print('d' in listab) # There's a 'd' in the combined list, so this will return a value 'True'
 
+# Count occurence of element
+print(listab.count('e'))
+
 ### SET
 
 # Similar to a list, but with fewer opportunities. Contains no duplicates... (unique elements only)
