@@ -48,12 +48,10 @@ for age in ages:
 
 ourclass = ['Mark','Zoran','Jing','Lisa']
 
-# ourclass is iterable, we want to loop through all its elements, we here name 'name'
-for name in ourclass:
+for name in ourclass: # ourclass is iterable, we want to loop through all its elements, we here name 'name'
 	print (name)
 
-# this is the same... we freely choose the loop variable (in this case 'item' - as long as it's unique and doesn't overlap with the name of a function/command, it's fine...)
-for item in ourclass:
+for item in ourclass: # this is the same... we freely choose the loop variable (in this case 'item' - as long as it's unique and doesn't overlap with the name of a function/command, it's fine...)
 	print (item)
 
 ### NESTED FOR LOOPS: a loop in a loop - per iteration of the outer loop, the inner loop is ENTIRELY completed. The indenting is EXTREMELY important because it prioritizes the order of completing tasks...
