@@ -136,7 +136,7 @@ participant['bmi'] = participant['weight']/(participant['length']**2)
 print('BMI:',participant['bmi'])
 # Delete key 'bmi'
 del participant['bmi']
-#print(participant['bmi']) # A now it's gone... so actually running this would produce an error that would stop the script
+#print(participant['bmi']) # And now it's gone... so actually running this would produce an error that would stop the script
 
 ### LIST OF DICTIONARIES - or how to deal with two-dimensional datasets as we know them from for example survey research
 
