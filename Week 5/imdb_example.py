@@ -39,7 +39,6 @@ url = baseurl
 soup = fetchurl(url)
 
 ### Following lines of code are used to isolate the amount of search results (to use to stop the while loop we're about to use when all results are in)
-
 searchresults = soup.find('div',class_='nav')
 searchresults = searchresults.find('div',class_='desc').getText()
 searchresults = searchresults.split('of ')[1]
@@ -77,7 +76,7 @@ while counter < int(searchresults): # Continue looping over all the search resul
         except:
             rating = "" # If there is no rating, we'll use this empty string value instead
 
-        print(title,year,rating) # printto console
+        print(title,year,rating) # print to console
 
         ### WRITE TO CSV FILE
         csv_file = open('imdb_data.csv','a')
