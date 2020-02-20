@@ -17,7 +17,7 @@
 
 # Alternatively we can run this programmatically in Python...
 # 1. Scroll back up and go to the "curl -X... " statement in the black area
-# 2. Copy/paste the entire code and convert it to Python code at http://https://curl.trillworks.com/
+# 2. Copy/paste the entire code and convert it to Python code at https://curl.trillworks.com/
 # 3. Copy/paste the coverted code into your Python script (Note: the access token in this example will be expired, get a new one!)
 
 import requests
@@ -34,11 +34,6 @@ params = (
 )
 
 response = requests.get('https://api.spotify.com/v1/search', headers=headers, params=params)
-
-#NB. Original query string below. It seems impossible to parse and
-#reproduce query strings 100% accurately so the one below is given
-#in case the reproduced version is not "correct".
-# response = requests.get('https://api.spotify.com/v1/search?q=taylor%20swift&type=artist', headers=headers)
 
 # 4. Add the code to interpret the response
 
