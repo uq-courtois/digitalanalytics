@@ -42,6 +42,8 @@ import json
 json_data = json.loads(response.text) # convert json response to text/dict
 print(json_data) # prints the raw reponse in JSON format
 print()
+print(json.dumps(json_data, sort_keys=True, indent=3)) # prints the 'beautified', structured response with indents
+print()
 
 # 5. To get what we specifically need, i.e., the genres:
 
