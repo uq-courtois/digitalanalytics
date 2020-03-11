@@ -1,36 +1,47 @@
-### EXERCISE 1a:
+### EXERCISE 1
+
+# Define a variable name1 with a value Jane
+# Build a program that prints ‘Found Jane’ when the value of name matches ‘Jane’ 
+# and ‘Jane not found’ when the value does not match ‘Jane’
+
+### EXERCISE 2a
 
 # Define a list with the following names: Jane, John, Marisa, Kobe, Eliza
 # Print each name on a separate line by looping through the list
 
-### EXERCISE 1b:
+### EXERCISE 2b:
 
 # Define a list with the following numbers: 34, 45, 23, 49
 # Divide each number by 2 and print the result on a seperate line
 
-### EXERCISE 2:
+### EXERCISE 3:
 
-# Write a program that filters strings from the following list: 
-# tip: if item == str:
+# Write a program that filters strings from the following list and
+# stores each of the string values in a new list called newcollection: 
+
+# TIP: test whether value is a string >>>
+# if type(item) == str:
 
 collection = ['Eric',10,34,'Karen',32,'Lisa']
 
 # Print the final list to the console
 
-### EXERCISE 3:
+### EXERCISE 4:
 
-# Write a program that multiplies every number in list x by 5.
+# Write a program that multiplies every number in list x by 5 
+# and store those new values in a new list that you can use after the for loop is finished.
 # Print the results in descending order...
 
 x = [4,5,2,4,5,2,4]
 
-### EXERCISE 4:
+### EXERCISE 5:
 
-# Variable lyric is a string. Count the times that the word 'rock' is mentioned and print the result...
+# Variable lyric is a string. Loop through the individual words.
+# Only print the word ‘rock’ to the console each time it is mentioned.
 
 lyric = "Everybody rock your body Everybody rock your body right Backstreet's Back alright"
 
-### EXERCISE 5:
+### EXERCISE 6:
 
 # Format the following matrix in the appropriate data structure
 
@@ -43,7 +54,7 @@ lyric = "Everybody rock your body Everybody rock your body right Backstreet's Ba
 # Add age as a new key in the already given list of dictionaries
 # Print the name and the age of every person if they are over 30 years old
 
-### EXERCISE 6a:
+### EXERCISE 7a:
 
 # Print the first five urls that contain an .au domain form the list urls
 
@@ -59,7 +70,7 @@ urls = [
 "www.yourtv.com.au/"
 ]
 
-### EXERCISE 6b:
+### EXERCISE 7b:
 
 # Print the first five unique urls that contain an .au domain form the list urls (i.e., www.freeview.com.au/ is in there twice)
 
