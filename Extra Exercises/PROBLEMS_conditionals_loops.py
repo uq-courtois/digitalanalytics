@@ -30,7 +30,7 @@ listurls = [
 ### EXERCISE C
 # Isolate the students that have at least one A on a course
 # Print their names, and the grades for their courses
-# i.e., Name has a(n) a grade 'grade' for course and a grade 'grade' for course
+# i.e., Name has a grade 'grade' for course and a grade 'grade' for course
 
 studentgrades = [
 {'student':'Mark','English':'A','History':'A'},
