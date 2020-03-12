@@ -11,3 +11,14 @@
 # Order alfabethically in the list
 # Print the entire list
 # Print the first two names
+
+### EXERCISE C
+# Define a variable ‘dataset’ that contains the information in the table
+# Change Jane into Jean
+# Correct Eric’s age from 30 to 31
+# Print dataset
+
+# Name  Age 
+# Jane  21
+# Eric  30
+# Sonia 32
