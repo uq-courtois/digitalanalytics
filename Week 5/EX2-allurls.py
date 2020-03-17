@@ -27,6 +27,6 @@ soup = BeautifulSoup(html, 'html.parser')
 
 ### Find the hyperlinks (href) in all of these <a>-tags and store them in the variable hyperlink
 
-for link in soup.find_all('a'): # Loop through all the a href's
-	hyperlink = link['href']
+for link in soup.find_all('a'): # Loop through all the <a> tags
+	hyperlink = link['href'] # Specifically get the contents of the href attribute
 	print(hyperlink) # print result of iteration   
