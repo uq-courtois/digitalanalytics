@@ -40,7 +40,21 @@ print(cities[-1])
 # Check (programmatically!) whether Brisbane is in the list
 print('Brisbane' in cities)
 
-### EXERCISE 4:
+### EXERCISE 4
+
+# Define a dictionary with three key-value pairs
+# Key 'name' with value 'Jane'
+# Key 'age' with value 25
+# Key 'sex' with value 'F'
+person = {'name':'Jane','age':25,'sex':'F'}
+
+# Change Jane's name into 'Erica' by overwriting the value of the key 'name'
+person['name'] = 'Erica'
+
+# Print the new value of name to the console
+print(person['name'])
+
+### EXERCISE 5:
 
 # Define a list with the following words: ‘cow’, ‘sheep’, ‘horse’ and print it to the console
 animals = ['cow','sheep','horse']
