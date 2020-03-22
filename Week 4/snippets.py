@@ -1,27 +1,19 @@
-### READ FROM AND WRITE TO CSV FILES
+# READING
 
-### READING
+# Import pandas
+import pandas as pd
 
-# Open a CSV file as a list of dictionaries (two-dimensional matrix)
+data = pd.read_csv('newdata.csv',sep=';') # Reading data from csv
+data = data.T.to_dict().values() # Converting dataframe into list of dictionaries
 
-import csv # We need to call this module - Can't do without...
-
-file = open('csvtutorial.csv', 'r') # CSV file is opened
-
-importdata = csv.DictReader(file, delimiter=';') # Filecontents written into list of dictionaries
-
-for item in importdata: # Let's loop through the data first to get a grasp of it and/or to process/manipulate it further...
-    #print(item)
-    print(item['Name'],'is',item['Age'],'years old')
-
-###
-###
+# Iterate through the imported data
+for item in data:
+	print(item)
 
 ### WRITING
 
-# import csv module
-
-import csv
+# Import pandas
+import pandas as pd
 
 # New data, hardcoded into our script:
 
@@ -31,22 +23,5 @@ newdata = [
         {'Course':'Physical Exercise','Grade':'12'},
         ]
 
-# Create a new CSV file:
-
-csv_file = open('newfile.csv','a') # Open a new file, called imdprocessed.csv, allow to append information
-csv_writer = csv.writer(csv_file, delimiter=';') # Define csv writer, set the delimiter
-csv_writer.writerow(['Course','Grade']) # Write the first row, containing variable names - DO THIS ONLY ONCE...
-csv_file.close # Close file
-
-for item in newdata:
-
-     csv_file = open('newfile.csv','a') # Open file, allow to append
-     csv_writer = csv.writer(csv_file, delimiter=';') # Not necessary, but reset delimiter just to be sure...
-     csv_writer.writerow([
-                         item['Course'],
-                         item['Grade'],
-                         ]) # Write result row
-     csv_file.flush() # Force to flush
-     csv_file.close # Close file
-
-###
+newdata = pd.DataFrame(newdata) # Converting list of dictionaries into dataframe
+newdata.to_csv('newdata.csv',sep=';',index=False) # Writing dataframe into CSV file
