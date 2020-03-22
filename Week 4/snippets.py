@@ -19,6 +19,10 @@ for item in importdata: # Let's loop through the data first to get a grasp of it
 
 ### WRITING
 
+# import csv module
+
+import csv
+
 # New data, hardcoded into our script:
 
 newdata = [
