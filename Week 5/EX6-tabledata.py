@@ -2,9 +2,6 @@ from urllib.request import Request, urlopen
 import ssl
 from bs4 import BeautifulSoup
 
-### IMPORTANT: module to download YouTube video
-import youtube_dl
-
 # The URL we want to scrape
 url = 'http://www.cedriccourtois.be/fanpage'
 
@@ -28,31 +25,17 @@ uClient.close()
 ### Interpret the page source as html
 soup = BeautifulSoup(html, 'html.parser')
 
-print()
-print('ALBUM, SALES, RELEASE')
+### Isolating the table data (mind that there is only one table,if there would be more, than we need to use a find_all)
+tabledata = soup.find('table')
 
-### Isolate the data from the <table> </table> tags (we can do this because there is only one on the page!)
+### Looping through all the table rows
+for row in tabledata.find_all('tr'):
 
-tabledata = soup.find('table') # Extract all table information from page, not that there is only one (needs for-loop when multiple tables are present)
-
-### Within the isolated table data, we loop through each row... <tr> </tr>
-
-for tablerow in tabledata.find_all('tr'):
-
-    album = sales = release = ''
-    
-    # And extract each specific cell class within that row... ('album','sales','release')
-    
-    for tablecell in tablerow.find_all('td',class_='album'): # loop through all the table data (cells) with album class
-        album = tablecell.getText()
-
-    for tablecell in tablerow.find_all('td',class_='sales'): # loop through all the table data (cells) with sales class
-        sales = tablecell.getText()
-        sales = sales.replace(',','')
-
-    for tablecell in tablerow.find_all('td',class_='release'): # loop through all the table data (cells) with release class
-        release = tablecell.getText()
-        
-    # When there's some data in the table row, even when incomplete, we print it...
-    if album != '' or sales != '' or release != '':
-        print(album+','+sales+','+release)
+	# Use a try/except because otherwise we will get errors because we are not handling the <th> table header tags
+	try:
+		album = row.find('td', class_ = 'album').getText()
+		sales = row.find('td', class_ = 'sales').getText()
+		release = row.find('td', class_ = 'release').getText()
+		print(album,sales,release)
+	except:
+		pass
