@@ -120,8 +120,7 @@ while counter < int(searchresults): # Continue looping over all the search resul
 				countries = ', '.join(countries)
 				print('Countries:',countries)
 				
-			# Add information to dataset variable
-
+		# Add information to dataset variable (list of dictionaries temorarily storing the data)
 		dataset.append({
 			'title':title,
 				'year':year,
@@ -137,5 +136,6 @@ while counter < int(searchresults): # Continue looping over all the search resul
 
 		counter += 50 # We have just done 50 records (or less), these are added to the counter so the while-loop can be stopped in time
 
+# At the end, when all information is gathered...		
 dataset = pd.DataFrame(dataset) # Converting list of dictionaries into dataframe
 dataset.to_csv('imdbdata.csv',sep=';',index=False) # Writing dataframe into CSV file
