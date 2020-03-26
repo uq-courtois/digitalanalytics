@@ -25,15 +25,15 @@ uClient.close()
 ### Interpret the page source as html
 soup = BeautifulSoup(html, 'html.parser')
 
-cagemovies = []
+cagemovies = [] # Empty list to count Cage's movies
 
-for item in soup.find_all('div', class_ = "filmo-row odd"):
-	title = item.find('a').getText().strip()
-	year = item.find('span', class_ = 'year_column').getText().strip()
+for item in soup.find_all('div', class_ = "filmo-row odd"): # iterate through all the odd divs
+	title = item.find('a').getText().strip() # Get movie title from hyperlink, strip spaces
+	year = item.find('span', class_ = 'year_column').getText().strip() # Get year from span
 	print(title+' ('+str(year)+')')
 	cagemovies.append(title)
 
-for item in soup.find_all('div', class_ = "filmo-row even"):
+for item in soup.find_all('div', class_ = "filmo-row even"): # iterate through all the even divs
 	title = item.find('a').getText().strip()
 	year = item.find('span', class_ = 'year_column').getText().strip()
 	print(title+' ('+str(year)+')')
