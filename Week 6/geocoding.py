@@ -9,7 +9,7 @@ query = query.replace(' ','+') # Replace spaces in query with +
 apikey = "&key=AIzaSyDC60i9o-E4sOVCsYCZCYGB3DIlhAenZy0" # API key - you will need to get your own to try this example
 # I de-actived the API key in this example for safety reasons
 
-compiledurl = baseurl + query + apikey
+compiledurl = baseurl + query + apikey # Combining all the url components into a single url
 
 json_object = urlopen(compiledurl) # Send request + get response
 locationdata = json.load(json_object) # Convert JSON result
