@@ -15,3 +15,5 @@ json_object = urlopen(compiledurl) # Send request + get response
 locationdata = json.load(json_object) # Convert JSON result
 
 print(locationdata)
+
+# print(json.dumps(locationdata, sort_keys=True, indent=3)) # Use this print statement to have the response nicely formatted
