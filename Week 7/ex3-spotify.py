@@ -10,7 +10,7 @@ dataset = [] # Empty list to temporarily save the new data, and at the end write
 
 # Iterate through the imported data
 for item in data:
-	print('Searching for',item['Artist'])
+  print('Searching for',item['Artist'])
 
 	headers = {
 			'Accept': 'application/json',
