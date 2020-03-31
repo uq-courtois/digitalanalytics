@@ -40,7 +40,6 @@ print(dataset) # Just printing it to check
 newdata = pd.DataFrame(dataset) # Converting list of dictionaries into dataframe
 newdata.to_csv('grades.csv',sep=';',index=False) # Writing dataframe into CSV file
 
-
 ### EXERCISE 3
 
 # Read the data from searchresults.csv (< See Blackboard item for URL >)
@@ -59,10 +58,10 @@ urllist = [] # empty list to store all domain names we're about the extract from
 # Iterate through the imported data
 for item in data:
   urllist.append(item['URL'].split('/')[0])
-	# We get the value for the URL key in each iteration
-	# We split on the /, which returns a list with the url in bits and pieces
-	# The first bit (or element in that list), is the domain name
-	# We append that domain name to urllist
+# We get the value for the URL key in each iteration
+# We split on the /, which returns a list with the url in bits and pieces
+# The first bit (or element in that list), is the domain name
+# We append that domain name to urllist
 
 print(set(urllist)) # We print urllist as a set so we're sure that there are no duplicates, only uniques
 print(urllist.count('www.hln.be')) # We count the amount of times www.hln.be is in the list (this is on the list, not a set version of it)
@@ -73,7 +72,7 @@ for item in data:
   if item['Rank'] < 4: # Conditional to make sure we only add information of top three results
     print(item['URL'],item['Rank']) # Just printing the top three resuls' URL and Rank
     topthree.append({'URL':item['URL'],'Rank':item['Rank']}) # topthree list - empty before loop - is populated with top 3 results
-		# Note that we are adding a dictionary to the list per iteration, containing the iteration value of URL and Rank
+# Note that we are adding a dictionary to the list per iteration, containing the iteration value of URL and Rank
 
 ### WRITING
 
