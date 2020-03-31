@@ -1,3 +1,5 @@
+### SOLUTIONS
+
 ### EXERCISE 1:
 
 # Read data from dataset.csv - Download it from < SEE BLACKBOARD LINK >
