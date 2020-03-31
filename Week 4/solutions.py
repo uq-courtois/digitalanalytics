@@ -1,5 +1,3 @@
-### SOLUTIONS
-
 ### EXERCISE 1:
 
 # Read data from dataset.csv - Download it from < SEE BLACKBOARD LINK >
@@ -72,7 +70,7 @@ print(urllist.count('www.hln.be')) # We count the amount of times www.hln.be is 
 topthree = [] # empty list that will be our list of dictionaries with top three results we want to export in a file
 
 for item in data:
-	if item['Rank'] < 4: # Conditional to make sure we only add information of top three results
+  if item['Rank'] < 4: # Conditional to make sure we only add information of top three results
 		print(item['URL'],item['Rank']) # Just printing the top three resuls' URL and Rank
 		topthree.append({'URL':item['URL'],'Rank':item['Rank']}) # topthree list - empty before loop - is populated with top 3 results
 		# Note that we are adding a dictionary to the list per iteration, containing the iteration value of URL and Rank
@@ -98,15 +96,14 @@ data = data.T.to_dict().values() # Converting dataframe into list of dictionarie
 
 # Iterate through the imported data
 for item in data:
-	item['followers'] = item['followers'].replace('K','000') # Replacing the string value of the key with a numerical equivalent
-	item['followers'] = item['followers'].replace('M','000000') # Replacing the string value of the key with a numerical equivalent
-	item['following'] = item['following'].replace('K','000') # Replacing the string value of the key with a numerical equivalent
-	item['following'] = item['following'].replace('M','000000') # Replacing the string value of the key with a numerical equivalent
-	print(item['followers'],item['following']) # Printing the results before writing
+  item['followers'] = item['followers'].replace('K','000') # Replacing the string value of the key with a numerical equivalent
+  item['followers'] = item['followers'].replace('M','000000') # Replacing the string value of the key with a numerical equivalent
+  item['following'] = item['following'].replace('K','000') # Replacing the string value of the key with a numerical equivalent
+  item['following'] = item['following'].replace('M','000000') # Replacing the string value of the key with a numerical equivalent
+  print(item['followers'],item['following']) # Printing the results before writing
 
 ### WRITING
 
 # New data, hardcoded into our script:
-
 data = pd.DataFrame(data) # Converting list of dictionaries into dataframe
 data.to_csv('instagram_clean.csv',sep=';',index=False) # Writing dataframe into CSV file
