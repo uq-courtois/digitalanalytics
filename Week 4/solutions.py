@@ -12,7 +12,8 @@ data = pd.read_csv('dataset.csv',sep=',') # Reading data from csv
 data = data.T.to_dict().values() # Converting dataframe into list of dictionaries
 
 # Iterate through the imported data
-for item in data:print(item['artist'],'-',item['song'])
+for item in data:
+  print(item['artist'],'-',item['song'])
 
 ### EXERCISE 2:
 
@@ -57,7 +58,7 @@ urllist = [] # empty list to store all domain names we're about the extract from
 
 # Iterate through the imported data
 for item in data:
-	urllist.append(item['URL'].split('/')[0])
+  urllist.append(item['URL'].split('/')[0])
 	# We get the value for the URL key in each iteration
 	# We split on the /, which returns a list with the url in bits and pieces
 	# The first bit (or element in that list), is the domain name
@@ -70,8 +71,8 @@ topthree = [] # empty list that will be our list of dictionaries with top three 
 
 for item in data:
   if item['Rank'] < 4: # Conditional to make sure we only add information of top three results
-		print(item['URL'],item['Rank']) # Just printing the top three resuls' URL and Rank
-		topthree.append({'URL':item['URL'],'Rank':item['Rank']}) # topthree list - empty before loop - is populated with top 3 results
+    print(item['URL'],item['Rank']) # Just printing the top three resuls' URL and Rank
+    topthree.append({'URL':item['URL'],'Rank':item['Rank']}) # topthree list - empty before loop - is populated with top 3 results
 		# Note that we are adding a dictionary to the list per iteration, containing the iteration value of URL and Rank
 
 ### WRITING
