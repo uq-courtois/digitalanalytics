@@ -47,12 +47,11 @@ uClient.close()
 
 ### Interpret the page source as html
 soup = BeautifulSoup(html, 'html.parser')
-maindiv = soup.find('div',class_='_6TJ0W')
 
 allarticles = []
 covidarticles = []
 
-for item in maindiv.find_all('div',class_='_1yJ-S'):
+for item in soup.find_all('div',class_='_1yJ-S'):
 	title = item.find('a').getText()
 	link = 'http://abc.net.au'+item.find('a')['href']
 
