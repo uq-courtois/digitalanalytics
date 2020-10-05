@@ -52,7 +52,7 @@ maindiv = soup.find('div',class_='_6TJ0W')
 allarticles = []
 covidarticles = []
 
-for item in maindiv.find_all('div',class_='_2kqX-'):
+for item in maindiv.find_all('div',class_='_1yJ-S'):
 	title = item.find('a').getText()
 	link = 'http://abc.net.au'+item.find('a')['href']
 
