@@ -16,6 +16,8 @@ params = (
 
 response = requests.get('https://api.spotify.com/v1/search', headers=headers, params=params) # request the response
 
+print(response) # print raw response to check response code
+
 json_data = json.loads(response.text) # convert json response to text/dict
 
 print(json.dumps(json_data, sort_keys=True, indent=3))
