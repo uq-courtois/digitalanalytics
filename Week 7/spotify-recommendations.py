@@ -20,6 +20,7 @@ params = (
 )
 
 response = requests.get('https://api.spotify.com/v1/recommendations', headers=headers, params=params) # Making request
+print(response) # Optional, informs on whether call was successful (Code [200])
 json_data = json.loads(response.text) # Converting response into Python data structure
 
 # Printing the tracks by artists, one by one
