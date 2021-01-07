@@ -12,11 +12,11 @@ headers = {
 
 # Setting parameters
 params = (
-    ('market', 'US'),
+    ('market', 'US'), # This is optional, it restricts the responses to tracks available on the US market
     ('seed_artists', '2NjfBq1NflQcKSeiDooVjY'),
     ('seed_tracks', '0UywfDKYlyiu1b38DRrzYD'),
-    ('min_energy', '0.4'),
-    ('min_popularity', '50'),
+    ('min_energy', '0.4'), # This is optional, it restricts the responses to tracks with a minimum energy level - Spotify analyses tracks for their characteristics
+    ('min_popularity', '50'), # This is optional, it restricts the responses to tracks with higher popularity stats
 )
 
 response = requests.get('https://api.spotify.com/v1/recommendations', headers=headers, params=params) # Making request
