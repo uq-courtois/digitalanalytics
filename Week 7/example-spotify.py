@@ -16,6 +16,7 @@ params = (
 
 response = requests.get('https://api.spotify.com/v1/search', headers=headers, params=params) # request the response
 # The endpoint base url is supplemented by the arguments in the variables headers and params
+print(response) # Optional, informs on whether call was successful (Code [200])
 
 json_data = json.loads(response.text) # convert json response to text/dict
 
