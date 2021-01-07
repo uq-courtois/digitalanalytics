@@ -13,6 +13,7 @@ apikey = "&key=AIzaSyDC60i9o-E4sOVCsYCZCYGB3DIlhAenZy0" # API key - you will nee
 compiledurl = baseurl + query + apikey # Combining all the url components into a single url
 
 json_object = urlopen(compiledurl) # Send request + get response
+print(json_object) # See response code (optional, but is helpful in diagnosing potential problems)
 locationdata = json.load(json_object) # Convert JSON result
 
  for locationitem in locationdata['results']:
