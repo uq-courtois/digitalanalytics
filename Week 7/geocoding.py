@@ -4,7 +4,7 @@ import json
 from urllib.request import urlopen
 
 baseurl = "https://maps.googleapis.com/maps/api/geocode/json?" # Endpoint URL
-query = "address=" + "University of Queensland" # Build query for address argument
+query = "address=" + "University of Queensland St Lucia" # Build query for address argument
 query = query.replace(' ','+') # Replace spaces in query with +
 apikey = "&key=AIzaSyDC60i9o-E4sOVCsYCZCYGB3DIlhAenZy0" # API key - you will need to get your own to try this example
 # I deactivated the API key in this example for safety reasons
