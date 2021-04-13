@@ -16,10 +16,10 @@ json_object = urlopen(compiledurl) # Send request + get response
 print(json_object) # See response code (optional, but is helpful in diagnosing potential problems)
 locationdata = json.load(json_object) # Convert JSON result
 
-for locationitem in locationdata['results']:lat = locationitem['geometry']['location']['lat']
+for locationitem in locationdata['results']:
+    lat = locationitem['geometry']['location']['lat']
     lng = locationitem['geometry']['location']['lng']
     fulladdress = locationitem['formatted_address']
-    
     print()
     print('Found one at',fulladdress,'- Geolocation:',lat,lng)
 
