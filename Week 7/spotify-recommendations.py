@@ -25,4 +25,4 @@ json_data = json.loads(response.text) # Converting response into Python data str
 
 # Printing the tracks by artists, one by one
 for track in json_data['tracks']:
-	print(track['album']['artists'][0]['name'],'by',track['name'],)
+	print(,track['name'],'by',track['album']['artists'][0]['name'])
